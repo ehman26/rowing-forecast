@@ -1,0 +1,113 @@
+<html>
+
+<head>
+<meta Http-Equiv="Cache-Control" Content="no-store">
+<meta Http-Equiv="Cache" content="no-cache">
+<meta Http-Equiv="Pragma-Control" content="no-cache">
+<meta Http-Equiv="Cache-directive" Content="no-cache">
+<meta Http-Equiv="Pragma-directive" Content="no-cache">
+<meta Http-Equiv="Cache-Control" Content="no-cache">
+<meta Http-Equiv="Pragma" Content="no-cache">
+<meta Http-Equiv="Expires" Content="0">
+<meta Http-Equiv="Pragma-directive: no-cache">
+<meta Http-Equiv="Cache-directive: no-cache">
+
+<title>Rowing Forecast</title>
+
+<style>
+ul#container		{list-style: none}
+ul#container li		{float:left; text-align:center}
+ul#container li div {border:1px solid; background-color:lightyellow}
+
+.source		{font-size:90%}
+#links			{text-align:center; width:100%}
+#links div		{padding:10px}
+
+#stage img		{vertical-align:top; height:350px}
+#velocity img 	{vertical-align:top; height:350px}
+#stage2 img	{vertical-align:top; height:350px}
+
+#temp img		{vertical-align:top; height:375px}
+#discharge img	{vertical-align:top; height:375px}
+
+#forecast img	{vertical-align:top; height:}
+
+#wind img		{vertical-align:top; height:}
+#wind2 img		{vertical-align:top; height:}
+#wind2		{padding:5px; background-color: lightgray}
+</style>
+
+</head>
+
+<body>
+
+<ul id="container">
+
+<li id="links">
+	<div>
+		<a target="_blank" href="https://sinclairstoryline.com/resources/embeds/jw8-embed.html?file=https://d237lhmlzpreh2.cloudfront.net/KATUB/KATUSkyCam/m3u8/KATUB-KATUSkyCam_live.m3u8?resize=true&autostart=true">KATU Web Cam</a> --
+		<a target="_blank" href="https://player.streamguys.com/allclassical/tilicam/sgplayer/player.php">Tili-cam</a> --
+		<a target="_blank" href="https://waterdata.usgs.gov/usa/nwis/uv?site_no=14211720">Station L river link</a> --
+		<a target="_blank" href="https://www.wrh.noaa.gov/mesowest/getobext.php?sid=ODT10&table=1&banner=off">Fremont Bridge</a>
+	</div>
+</li>
+
+<!--
+<li id="wind2">
+	<a class="source" target="_blank" href="http://mesowest.utah.edu/cgi-bin/droman/meso_base.cgi?stn=E2298&unit=0&time=LOCAL&year1=2017&month1=5&day1=3&hour1=7&hours=24&graph=1&past=0">Source: MesoWest - Station E2298</a><br />
+	<img src="http://mesowest.utah.edu/cgi-bin/droman/time_chart.cgi?stn=E2298&unit=0&month1=5&day1=03&year1=2017&hour1=07&timeout=0700&past=0&time=LOCAL&hours=12&graph=TTD&gsize=1%20&gauto=1&gmin=&gmax=&linetype=colorline" />
+	<img src="http://mesowest.utah.edu/cgi-bin/droman/time_chart.cgi?stn=E2298&unit=0&month1=5&day1=04&year1=2017&hour1=07&timeout=0700&past=0&time=LOCAL&hours=12&graph=WND&gsize=1&gauto=1&gmin=&gmax=&linetype=colorline" />
+</li>
+-->
+
+<li style="clear:left; width:100%; padding:2px">
+
+<li id="stage">
+	<div>
+		<a class="source" target="_blank" href="http://www.nwrfc.noaa.gov/river/station/flowplot/flowplot.cgi?PRTO3">Source: NW River Forecast Center</a><br \>
+		10 ft
+	</div>
+	<img src="http://www.nwrfc.noaa.gov/station/flowplot/hydroPlot.php?id=PRTO3&pe=HG" />
+</li>
+<li id="discharge">
+	<div>
+		<a class="source" target="_blank" href="http://or.water.usgs.gov/will_morrison/monitors/">Source: Oregon Water Science Center</a><br />
+		50,000 cu ft/s
+	</div>
+	<img src="http://or.water.usgs.gov/will_morrison/monitors/will_morrison_kq_7.png" />
+</li>
+<li id="temp">
+	<div>
+		<a class="source" target="_blank" href="http://or.water.usgs.gov/will_morrison/monitors/">Source: Oregon Water Science Center</a><br />
+		0C=32F, 5C=41F, <b>10C=50F</b>, 15C=59F, 20C=68F
+	</div>
+	<img src="http://or.water.usgs.gov/will_morrison/monitors/will_morrison_t_7.png" />
+</li>
+<li style="clear:left; width:100%; padding:2px">
+
+<li id="velocity">
+	<a class="source" target="_blank" href="http://www.nwrfc.noaa.gov/river/station/flowplot/flowplot.cgi?PRTO3">Source: NW River Forecast Center</a><br \>
+	<img src="http://www.nwrfc.noaa.gov/station/flowplot/hydroPlot.php?id=PRTO3&pe=WV" />
+</li>
+<li id="forecast">
+	<a class="source" target="_blank" href="http://forecast.weather.gov/MapClick.php?w0=t&w2=wc&w3=sfcwind&w3u=0&w4=sky&w5=pop&w7=rain&w9=snow&w12=fog&AheadHour=0&Submit=Submit&FcstType=graphical&textField1=45.52361&textField2=-122.67500&site=all&unit=0">Source: National Weather Service Forecast Office</a><br \>
+	<img src="https://forecast.weather.gov/meteograms/Plotter.php?lat=45.5236&lon=-122.675&wfo=PQR&zcode=ORZ006&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10011110101000100000000000000000000000000000000000000000000&lg=en&indu=0!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" \>
+</li>
+<li style="clear:left; width:100%; padding:2px">
+
+<li id="stage2">
+	<a class="source" target="_blank" href="http://water.weather.gov/ahps2/hydrograph.php?wfo=pqr&gage=prto3&view=1,1,1,1,1,1,1,1&toggles=10,7,8,2,9,15,6&type=2">Source: NWS - Advanced Hydrologic Prediction Service</a><br />
+	<img src="http://water.weather.gov/resources/hydrographs/prto3_record.png" />
+</li>
+
+<li id="wind">
+	<a class="source" target="_blank" href="https://www.willamettesailingclub.com/wx/wx/wx.htm">Source: Willamette Sailing Club</a><br />
+	<img src="https://www.willamettesailingclub.com/wx/wx/10MinAvgWindSpeed.gif" />
+	<img src="https://www.willamettesailingclub.com/wx/wx/WindSpeedHistory.gif" />
+	<img src="https://www.willamettesailingclub.com/wx/wx/HiWindSpeedHistory.gif" />
+</li>
+</ul>
+
+</body>
+
+</html>
