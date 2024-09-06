@@ -1,17 +1,6 @@
 <html>
 
 <head>
-<meta Http-Equiv="Cache-Control" Content="no-store">
-<meta Http-Equiv="Cache" content="no-cache">
-<meta Http-Equiv="Pragma-Control" content="no-cache">
-<meta Http-Equiv="Cache-directive" Content="no-cache">
-<meta Http-Equiv="Pragma-directive" Content="no-cache">
-<meta Http-Equiv="Cache-Control" Content="no-cache">
-<meta Http-Equiv="Pragma" Content="no-cache">
-<meta Http-Equiv="Expires" Content="0">
-<meta Http-Equiv="Pragma-directive: no-cache">
-<meta Http-Equiv="Cache-directive: no-cache">
-
 <title>Rowing Forecast</title>
 
 <style>
@@ -19,23 +8,29 @@ ul#container		{list-style: none}
 ul#container li		{float:left; text-align:center}
 ul#container li div {border:1px solid; background-color:lightyellow}
 
-.source		{font-size:90%}
+.source			{font-size:90%}
 #links			{text-align:center; width:100%}
 #links div		{padding:10px}
 
 #stage img		{vertical-align:top; height:350px}
 #velocity img 	{vertical-align:top; height:350px}
-#stage2 img	{vertical-align:top; height:350px}
+#stage2 img		{vertical-align:top; height:350px}
 
 #temp img		{vertical-align:top; height:375px}
 #discharge img	{vertical-align:top; height:375px}
 
-#forecast img	{vertical-align:top; height:}
+#forecast img	{vertical-align:top;}
 
-#wind img		{vertical-align:top; height:}
-#wind2 img		{vertical-align:top; height:}
-#wind2		{padding:5px; background-color: lightgray}
+#wind img		{vertical-align:top;}
+#wind2 img		{vertical-align:top;}
+#wind2			{padding:5px; background-color: lightgray}
 </style>
+
+<script>
+function makeURLUnique(element) {
+	element.src = element.src + '?' + new Date().getTime();
+}
+</script>
 
 </head>
 
@@ -102,9 +97,9 @@ ul#container li div {border:1px solid; background-color:lightyellow}
 
 <li id="wind">
 	<a class="source" target="_blank" href="https://www.willamettesailingclub.com/wx/wx/wx.htm">Source: Willamette Sailing Club</a><br />
-	<img src="https://www.willamettesailingclub.com/wx/wx/10MinAvgWindSpeed.gif" />
-	<img src="https://www.willamettesailingclub.com/wx/wx/WindSpeedHistory.gif" />
-	<img src="https://www.willamettesailingclub.com/wx/wx/HiWindSpeedHistory.gif" />
+	<img onload="makeURLUnique(this)" src="https://www.willamettesailingclub.com/wx/wx/10MinAvgWindSpeed.gif" />
+	<img onload="makeURLUnique(this)" src="https://www.willamettesailingclub.com/wx/wx/WindSpeedHistory.gif" />
+	<img onload="makeURLUnique(this)" src="https://www.willamettesailingclub.com/wx/wx/HiWindSpeedHistory.gif" />
 </li>
 </ul>
 
