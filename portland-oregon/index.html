@@ -27,14 +27,17 @@ ul#container li div {border:1px solid; background-color:lightyellow}
 </style>
 
 <script>
-function makeURLUnique(element) {
-	element.src = element.src + '?' + new Date().getTime();
+function makeURLUnique(args) {
+	for (i=0; i<args.length; i++) {
+		element = document.getElementById(args[i]);
+		element.src = element.src + '?' + new Date().getTime();
+	}
 }
 </script>
 
 </head>
 
-<body>
+<body onload="makeURLUnique(['AvgWindSpeed', 'WindSpeedHistory', 'HiWindSpeedHistory'])">
 
 <ul id="container">
 
@@ -97,9 +100,9 @@ function makeURLUnique(element) {
 
 <li id="wind">
 	<a class="source" target="_blank" href="https://www.willamettesailingclub.com/wx/wx/wx.htm">Source: Willamette Sailing Club</a><br />
-	<img onload="makeURLUnique(this)" src="https://www.willamettesailingclub.com/wx/wx/10MinAvgWindSpeed.gif" />
-	<img onload="makeURLUnique(this)" src="https://www.willamettesailingclub.com/wx/wx/WindSpeedHistory.gif" />
-	<img onload="makeURLUnique(this)" src="https://www.willamettesailingclub.com/wx/wx/HiWindSpeedHistory.gif" />
+	<img id="AvgWindSpeed" src="https://www.willamettesailingclub.com/wx/wx/10MinAvgWindSpeed.gif" />
+	<img id="WindSpeedHistory" src="https://www.willamettesailingclub.com/wx/wx/WindSpeedHistory.gif" />
+	<img id="HiWindSpeedHistory" src="https://www.willamettesailingclub.com/wx/wx/HiWindSpeedHistory.gif" />
 </li>
 </ul>
 
